@@ -1,0 +1,30 @@
+/* Hero Section */
+.hero-section {
+    background-color: inherit;
+    color: #0A2540;
+    text-align: center;
+    padding: 100px 0;
+    height: 75%;
+}
+
+.hero-section h2 {
+    font-size: 36px;
+    font-weight: 600;
+
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.hero-section .btn-primary {
+    background-color: #FF6F61;
+    color: Black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+

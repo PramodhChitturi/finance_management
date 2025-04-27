@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Expensly | Finance Management - Take control of your Finances{% endblock %}</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/icon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/icon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/icon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'images/icon/site.webmanifest' %}">
+
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="header-container">
+            <div class="left-side">
+                <h1 class="main-heading">
+                    <a href="/">Expensly</a>
+                </h1>
+                <nav class="nav-links">
+                    {% block nav %}
+                    <a href="/expenses/" class="{% if request.path == '/expenses/' %}active{% endif %}">Expenses</a>
+                    <a href="/report/" class="{% if request.path == '/report/' %}active{% endif %}">Report</a>
+                    <a href="/profile/" class="{% if request.path == '/profile/' %}active{% endif %}">Profile</a>
+                    {% endblock %}
+                </nav>
+            </div>
+
+            <div class="auth-links">
+                <a href="" class="{% if request.path == '/login/' %}active{% endif %}">Login</a>
+            </div>
+        </div>
+        <hr>
+        
+        {% block body %}
+
+        {% endblock %}
+
+        {% include 'footer.html' %}
+    </body>
+</html>

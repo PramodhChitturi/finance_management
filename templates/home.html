@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block body %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h2>Welcome to Expensly</h2>
+        <p>Your finance management made easy</p>
+        <a href="/signup" class="btn-primary">Get Started</a>
+    </div>
+</section>
+
+{% endblock %}
